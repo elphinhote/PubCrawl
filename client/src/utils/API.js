@@ -16,4 +16,12 @@ export default {
       headers: { "Content-Type": "application/json" },
     });
   },
+  deleteBars: function (_id) {
+    console.log(_id)
+    return axios({
+      method: "DELETE",
+      url: "/bars/deletebars/" + _id,
+      headers: { "Content-Type": "application/json" },
+    });
+  },
 };

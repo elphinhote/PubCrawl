@@ -5,17 +5,16 @@ import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import Profile from "./Pages/Profile";
 import Search from "./Pages/Search";
-import Itinerary from "./Pages/Itinerary";
+import PubCrawl from "./Pages/PubCrawl";
 import SavedPubCrawls from "./Pages/SavedPubCrawls";
 import Map from "./Pages/Map";
 import Home from "./Pages/Home";
 import UserContext from "./Context/UserContext";
 import NavbarLogin from "./Components/NavbarLogin";
 import Navbar from "./Components/Navbar";
-import ConfirmAccount from "./Pages/ConfirmAccount"
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.min.css';
-
+import ConfirmAccount from "./Pages/ConfirmAccount";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.min.css";
 
 function App() {
   const [userData, setUserData] = useState({
@@ -52,7 +51,7 @@ function App() {
 
   return (
     <div className="App">
-      <ToastContainer/>
+      <ToastContainer />
       <Router>
         {!userData.user ? (
           <>
@@ -68,7 +67,7 @@ function App() {
             <Route path="/register" component={Register} />
             <Route path="/profile" component={Profile} />
             <Route path="/search" component={Search} />
-            <Route path="/itinerary" component={Itinerary} />
+            <Route path="/pubcrawl" component={PubCrawl} />
             <Route path="/savedpubcrawls" component={SavedPubCrawls} />
             <Route path="/map" component={Map} />
             <Route path="/confirm_token/:token" component={ConfirmAccount} />

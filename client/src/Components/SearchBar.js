@@ -29,7 +29,7 @@ const SearchBar = () => {
           <form onSubmit={submitSearch}>
             <div className="input-field">
               <input id="search" type="search" onChange={onChange} required />
-              <label className="label-icon" for="search">
+              <label className="label-icon" htmlFor="search">
                 <i className="material-icons">search</i>
               </label>
               <i className="material-icons">close</i>

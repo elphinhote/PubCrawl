@@ -41,7 +41,7 @@ const Navbar = (props) => {
       <nav className="nav-extended grey darken-4">
         <div className="nav-wrapper grey darken-4 container">
           <a href="/" className="brand-logo">
-            PubSpace
+            pubspace
           </a>
           <a href="/" data-target="mobile-demo" className="sidenav-trigger">
             <i className="material-icons">menu</i>
@@ -54,7 +54,7 @@ const Navbar = (props) => {
               <a href="/search">Search</a>
             </li>
             <li>
-              <a href="/itinerary">PubCrawl</a>
+              <a href="/pubcrawl">PubCrawl</a>
             </li>
             <li>
               <a href="/login" onClick={logout}>
@@ -76,7 +76,7 @@ const Navbar = (props) => {
           <a href="/search">Search</a>
         </li>
         <li>
-          <a href="/itinerary">PubCrawl</a>
+          <a href="/pubcrawl">PubCrawl</a>
         </li>
         <a href="/login" onClick={logout}>
           Log out

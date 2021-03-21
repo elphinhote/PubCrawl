@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "materialize-css/dist/css/materialize.min.css";
-import Crawl from "./Crawl";
+import CrawlCard from "./CrawlCard";
 import axios from "axios";
 import M from "materialize-css";
 
@@ -43,27 +43,34 @@ const SearchCrawl = () => {
           </form>
         </div>
       </nav>
-      <label>Browser Select</label>
+      <label>First Stop</label>
       <select className="browser-default">
         <option value="" disabled selected>
           Choose your option
         </option>
-        <option>
-          {barArray.map((item, index) => (
-            <Crawl item={item} key={index} />
-          ))}
-          {/* <ul className="list-group container">
-            {barArray.map((item, index) => (
-              <Crawl item={item} key={index} />
-            ))}
-          </ul> */}
-        </option>
-      </select>
-      <ul className="list-group container">
         {barArray.map((item, index) => (
-          <Crawl item={item} key={index} />
+          <CrawlCard item={item} key={index} />
         ))}
-      </ul>
+      </select>
+      <label>Second Stop</label>
+      <select className="browser-default">
+        <option value="" disabled selected>
+          Choose your option
+        </option>
+        {barArray.map((item, index) => (
+          <CrawlCard item={item} key={index} />
+        ))}
+      </select>
+      <label>Third Stop</label>
+      <select className="browser-default">
+        <option value="" disabled selected>
+          Choose your option
+        </option>
+        {barArray.map((item, index) => (
+          <CrawlCard item={item} key={index} />
+        ))}
+      </select>
+      <button>map</button>
     </div>
   );
 };
