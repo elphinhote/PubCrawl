@@ -9,6 +9,14 @@ export default {
       headers: { "Content-Type": "application/json" },
     });
   },
+  updateBar: function (updateBar, _id) {
+    return axios({
+      method: "PUT",
+      url: "/bars/updatebars/" + _id,
+      data: updateBar,
+      headers: { "Content-Type": "application/json" },
+    });
+  },
   getBars: function () {
     return axios({
       method: "GET",
@@ -17,7 +25,7 @@ export default {
     });
   },
   deleteBars: function (_id) {
-    console.log(_id)
+    console.log(_id);
     return axios({
       method: "DELETE",
       url: "/bars/deletebars/" + _id,

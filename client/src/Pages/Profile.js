@@ -9,28 +9,32 @@ const Profile = () => {
   const { userData } = useContext(UserContext);
   const history = useHistory();
   const [favArray, setFavArray] = useState([]);
-  
-async function deleteFromFav (event){
+
+  async function deleteFromFav(event) {
     event.preventDefault();
     const index = event.target.getAttribute("data-index");
-    const _id = favArray[index]._id
+    const _id = favArray[index]._id;
     const apiDeletedBar = await API.deleteBars(_id);
-    const results = [...favArray]
-    results.splice(index, 1)
-    setFavArray(results)
-}
+    const results = [...favArray];
+    results.splice(index, 1);
+    setFavArray(results);
+  }
 
   useEffect(() => {
     (async () => {
       const favBars = await API.getBars();
       setFavArray(favBars.data);
-      
     })();
   }, []);
 
   useEffect(() => {
     if (!userData.user);
   }, [userData.user, history]);
+
+  const buttonStyleProfile = {
+    backgroundColor: "#24a3a0",
+    color: "#ffffff",
+  };
 
   return (
     <div>
@@ -42,16 +46,26 @@ async function deleteFromFav (event){
                 <div className="card-image">
                   <img src="https://via.placeholder.com/150" />
                 </div>
-                <h6>{userData.user?.displayName}</h6>
+                <h3>{userData.user?.displayName}</h3>
               </div>
             </div>
           </div>
         </div>
-        <h4>favorites</h4>
+        <h4>Favorite Bars</h4>
+        <button className="btn modal-trigger">
+          <a style={buttonStyleProfile} href="/addnewbar">
+            New Bar
+          </a>
+        </button>
 
         <ul className="list-group container">
           {favArray.map((item, index) => (
-            <CardProfile item={item} key={index} index={index} deleteFromFav={deleteFromFav} />
+            <CardProfile
+              item={item}
+              key={index}
+              index={index}
+              deleteFromFav={deleteFromFav}
+            />
           ))}
         </ul>
       </div>

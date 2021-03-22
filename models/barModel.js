@@ -27,7 +27,7 @@ const barSchema = new Schema({
     required: true,
   },
   overall: {
-    type: Number,
+    type: String,
     required: false,
   },
   country: {

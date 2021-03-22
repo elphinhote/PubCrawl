@@ -9,6 +9,7 @@ import PubCrawl from "./Pages/PubCrawl";
 import SavedPubCrawls from "./Pages/SavedPubCrawls";
 import Map from "./Pages/Map";
 import Home from "./Pages/Home";
+import AddNewBar from "./Pages/AddNewBar";
 import UserContext from "./Context/UserContext";
 import NavbarLogin from "./Components/NavbarLogin";
 import Navbar from "./Components/Navbar";
@@ -71,6 +72,7 @@ function App() {
             <Route path="/savedpubcrawls" component={SavedPubCrawls} />
             <Route path="/map" component={Map} />
             <Route path="/confirm_token/:token" component={ConfirmAccount} />
+            <Route path="/addnewbar" component={AddNewBar} />
             <Route path="/">
               <Home component={Home} />
             </Route>
