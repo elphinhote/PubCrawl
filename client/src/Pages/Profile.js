@@ -14,7 +14,7 @@ const Profile = () => {
     event.preventDefault();
     const index = event.target.getAttribute("data-index");
     const _id = favArray[index]._id;
-    const apiDeletedBar = await API.deleteBars(_id);
+    await API.deleteBars(_id);
     const results = [...favArray];
     results.splice(index, 1);
     setFavArray(results);
@@ -44,7 +44,10 @@ const Profile = () => {
             <div className="card">
               <div className="card-content">
                 <div className="card-image">
-                  <img src="https://via.placeholder.com/150" />
+                  <img
+                    alt="placeholder"
+                    src="https://via.placeholder.com/150"
+                  />
                 </div>
                 <h3>{userData.user?.displayName}</h3>
               </div>

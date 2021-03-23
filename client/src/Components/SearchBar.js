@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "materialize-css/dist/css/materialize.min.css";
 import Cards from "./Cards";
 import axios from "axios";

@@ -14,7 +14,7 @@ const AddNewBar = () => {
     e.preventDefault();
 
     try {
-      const newUserAddedBar = await API.saveBar(addNewBarForm);
+      await API.saveBar(addNewBarForm);
       history.push("/profile");
     } catch (err) {
       console.log("Couldn't save new Bar");

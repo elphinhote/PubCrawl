@@ -7,7 +7,7 @@ import { useHistory } from "react-router-dom";
 const CardProfile = ({ item, index, deleteFromFav }) => {
   useEffect(() => {
     var elems = document.querySelectorAll(".modal");
-    var instances = M.Modal.init(elems, {});
+    M.Modal.init(elems, {});
   }, []);
 
   const history = useHistory();
@@ -98,25 +98,69 @@ const CardProfile = ({ item, index, deleteFromFav }) => {
                 <div className="modal-content">
                   <form className="container" onSubmit={submit}>
                     <h3 className="black-text">Update Bar</h3>
-                    <h5>{"Bar ID = " + _id}</h5>
                     <label>Name</label>
-                    <input onChange={onChange} type="text" name="name" />
+                    <input
+                      onChange={onChange}
+                      placeholder={name}
+                      type="text"
+                      name="name"
+                    />
                     <label>Street</label>
-                    <input onChange={onChange} type="text" name="street" />
+                    <input
+                      onChange={onChange}
+                      placeholder={street}
+                      type="text"
+                      name="street"
+                    />
                     <label>City</label>
-                    <input onChange={onChange} type="text" name="city" />
+                    <input
+                      onChange={onChange}
+                      placeholder={city}
+                      type="text"
+                      name="city"
+                    />
                     <label>State</label>
-                    <input onChange={onChange} type="text" name="state" />
+                    <input
+                      onChange={onChange}
+                      placeholder={state}
+                      type="text"
+                      name="state"
+                    />
                     <label>Zip</label>
-                    <input onChange={onChange} type="text" name="zip" />
+                    <input
+                      onChange={onChange}
+                      placeholder={zip}
+                      type="text"
+                      name="zip"
+                    />
                     <label>Country</label>
-                    <input onChange={onChange} type="text" name="country" />
+                    <input
+                      onChange={onChange}
+                      placeholder={country}
+                      type="text"
+                      name="country"
+                    />
                     <label>Phone</label>
-                    <input onChange={onChange} type="text" name="phone" />
+                    <input
+                      onChange={onChange}
+                      placeholder={phone}
+                      type="text"
+                      name="phone"
+                    />
                     <label>Website URL</label>
-                    <input onChange={onChange} type="text" name="url" />
+                    <input
+                      onChange={onChange}
+                      placeholder={url}
+                      type="text"
+                      name="url"
+                    />
                     <label>Overall Rating</label>
-                    <input onChange={onChange} type="text" name="rating" />
+                    <input
+                      onChange={onChange}
+                      placeholder={overall}
+                      type="text"
+                      name="rating"
+                    />
                     <input type="submit" value="Update" />
                   </form>
                 </div>

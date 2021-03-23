@@ -2,16 +2,17 @@ import React, { useEffect } from "react";
 import "materialize-css/dist/css/materialize.min.css";
 import M from "materialize-css";
 import API from "../utils/API";
+import { toast } from "react-toastify";
 
 const Cards = ({ item }) => {
   useEffect(() => {
     var elems = document.querySelectorAll(".modal");
-    var instances = M.Modal.init(elems, {});
+    M.Modal.init(elems, {});
   }, []);
 
   function handleModalSubmit(event) {
     event.preventDefault();
-    const apiResults = API.saveBar({
+    API.saveBar({
       name,
       street,
       city,
@@ -22,7 +23,7 @@ const Cards = ({ item }) => {
       url,
       overall,
     });
-    return apiResults;
+    toast.success("Bar Added");
   }
 
   let {

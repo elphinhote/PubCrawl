@@ -6,7 +6,7 @@ import API from "../utils/API";
 const CrawlCard = ({ item }) => {
   useEffect(() => {
     var elems = document.querySelectorAll("select");
-    var instances = M.FormSelect.init(elems, {});
+    M.FormSelect.init(elems, {});
   }, []);
 
   // function handleModalSubmit(event) {

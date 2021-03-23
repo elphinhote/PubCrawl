@@ -25,7 +25,7 @@ const SearchCrawl = () => {
 
   useEffect(() => {
     var elems = document.querySelectorAll("select");
-    var instances = M.FormSelect.init(elems, {});
+    M.FormSelect.init(elems, {});
   }, []);
 
   return (

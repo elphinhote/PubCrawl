@@ -5,7 +5,7 @@ import M from "materialize-css";
 const NavbarLogin = () => {
   useEffect(() => {
     var elems = document.querySelectorAll(".sidenav");
-    var instances = M.Sidenav.init(elems, {});
+    M.Sidenav.init(elems, {});
   }, []);
 
   return (
@@ -16,7 +16,7 @@ const NavbarLogin = () => {
             <a href="/" className="brand-logo">
               pubspace
             </a>
-            <a href="#" data-target="mobile-demo" className="sidenav-trigger">
+            <a href="/" data-target="mobile-demo" className="sidenav-trigger">
               <i className="material-icons">menu</i>
             </a>
             <ul className="right hide-on-med-and-down">

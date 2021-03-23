@@ -40,11 +40,11 @@ function App() {
     }
   };
 
-  const logout = async () => {
-    setUserData({ token: undefined, user: undefined });
-    localStorage.setItem("auth-token", "");
-    console.log(logout, "success");
-  };
+  // const logout = async () => {
+  //   setUserData({ token: undefined, user: undefined });
+  //   localStorage.setItem("auth-token", "");
+  //   console.log(logout, "success");
+  // };
 
   useEffect(() => {
     checkLoggedIn();
