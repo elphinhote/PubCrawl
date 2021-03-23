@@ -35,7 +35,7 @@ const Login = () => {
   };
 
   useEffect(() => {
-    if (userData.user) history.push("/");
+    if (userData.user) history.push("/profile");
   }, [userData.user, history]);
 
   const buttonStyle1 = {

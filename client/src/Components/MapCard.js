@@ -3,10 +3,10 @@ import "materialize-css/dist/css/materialize.min.css";
 import M from "materialize-css";
 import API from "../utils/API";
 
-const CrawlCard = ({ item }) => {
+const MapCard = ({ item }) => {
   useEffect(() => {
     var elems = document.querySelectorAll("select");
-    M.FormSelect.init(elems, {});
+    var instances = M.FormSelect.init(elems, {});
   }, []);
 
   let {
@@ -25,12 +25,16 @@ const CrawlCard = ({ item }) => {
   const urlLink = "https://" + url;
 
   return (
-    <option value={id}>
-      {name}
-      {/* {", "}
-      {street} */}
-    </option>
+    <div>
+      <h1 value={id}>
+        {street}
+        {", "}
+        {city}
+        {", "}
+        {state}
+      </h1>
+    </div>
   );
 };
 
-export default CrawlCard;
+export default MapCard;

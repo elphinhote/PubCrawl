@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "materialize-css/dist/css/materialize.min.css";
 import CrawlCard from "./CrawlCard";
+import Map from "./Map";
 import axios from "axios";
 import M from "materialize-css";
 
-const SearchCrawl = () => {
+const SearchCrawl = ({ item }) => {
   const [search, setSearch] = useState("");
   const [barArray, setbarArray] = useState([]);
   const onChange = (e) => {
@@ -25,8 +26,23 @@ const SearchCrawl = () => {
 
   useEffect(() => {
     var elems = document.querySelectorAll("select");
+    var elems = document.querySelectorAll(".modal");
     M.FormSelect.init(elems, {});
+    M.Modal.init(elems, {});
   }, []);
+
+  // let {
+  //   id,
+  //   name,
+  //   street,
+  //   city,
+  //   state,
+  //   zip,
+  //   country,
+  //   phone,
+  //   url,
+  //   overall,
+  // } = item;
 
   return (
     <div>
@@ -70,7 +86,27 @@ const SearchCrawl = () => {
           <CrawlCard item={item} key={index} />
         ))}
       </select>
-      <button>map</button>
+
+      {/* <!-- Modal Trigger --> */}
+      <a className="waves-effect waves-light btn modal-trigger" href="#modal1">
+        Map
+      </a>
+
+      {/* <!-- Modal Structure --> */}
+      <div id="modal1" className="modal">
+        <div className="modal-content">
+          <Map />
+        </div>
+        <div className="modal-footer">
+          <a
+            href="#!"
+            className="modal-close waves-effect waves-green btn-flat"
+          >
+            close
+          </a>
+          <div id="app"></div>
+        </div>
+      </div>
     </div>
   );
 };
