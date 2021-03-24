@@ -31,19 +31,6 @@ const SearchCrawl = ({ item }) => {
     M.Modal.init(elems, {});
   }, []);
 
-  // let {
-  //   id,
-  //   name,
-  //   street,
-  //   city,
-  //   state,
-  //   zip,
-  //   country,
-  //   phone,
-  //   url,
-  //   overall,
-  // } = item;
-
   return (
     <div>
       <nav className="nav-extended grey lighten-1">
@@ -97,14 +84,10 @@ const SearchCrawl = ({ item }) => {
         <div className="modal-content">
           <Map />
         </div>
-        <div className="modal-footer">
-          <a
-            href="#!"
-            className="modal-close waves-effect waves-green btn-flat"
-          >
-            close
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat">
+            Close
           </a>
-          <div id="app"></div>
         </div>
       </div>
     </div>
