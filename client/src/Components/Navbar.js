@@ -43,7 +43,7 @@ const Navbar = (props) => {
           <a href="/" className="brand-logo">
             pubspace
           </a>
-          <a href="/" data-target="mobile-demo" className="sidenav-trigger">
+          <a href="/" data-target="mobile-demo" className="sidenav-trigger ">
             <i className="material-icons">menu</i>
           </a>
           <ul className="right hide-on-med-and-down">
@@ -65,7 +65,7 @@ const Navbar = (props) => {
         </div>
       </nav>
 
-      <ul className="sidenav" id="mobile-demo">
+      <ul className="sidenav white" id="mobile-demo">
         {/* <li>
           <a href="/">Home</a>
         </li> */}

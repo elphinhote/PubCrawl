@@ -47,19 +47,22 @@ const Cards = ({ item }) => {
         <div className="col s12 m6 l6">
           <div className="card grey lighten-5">
             <div className="card-content grey-text">
-              <h5 className="#bar-name">{name}</h5>
+              <h5 className="#bar-name grey-text text-darken-1">{name}</h5>
 
               <div className="card-action"></div>
 
               {/* <!-- Modal Trigger --> */}
-              <button data-target={id} className="btn modal-trigger">
+              <button
+                data-target={id}
+                className="btn modal-trigger grey darken-4 grey-text text-lighten-2"
+              >
                 details
               </button>
 
               {/* <!-- Modal Structure --> */}
               <div id={id} className="modal">
                 <div className="modal-content">
-                  <h5 className="#bar-name">{name}</h5>
+                  <h5 className="#bar-name grey-text text-darken-4">{name}</h5>
                   <ul>
                     <li className="#street-name">{street}</li>
                     <li className="#city-state-zip">

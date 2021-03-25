@@ -3,7 +3,7 @@ import SearchBar from "../Components/SearchBar";
 
 function Search() {
   return (
-    <div>
+    <div className="green lighten-5">
       <SearchBar />
     </div>
   );

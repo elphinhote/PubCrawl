@@ -26,7 +26,7 @@ const AddNewBar = () => {
     marginRight: "20px",
   };
   return (
-    <div>
+    <div className="white">
       <form className="container" onSubmit={submit}>
         <h3 className="black-text">Add Bar</h3>
         <label>Name</label>
@@ -47,7 +47,12 @@ const AddNewBar = () => {
         <input onChange={onChange} type="text" name="url" />
         <label>Overall Rating</label>
         <input onChange={onChange} type="text" name="rating" />
-        <input style={buttonStyleProfile} type="submit" value="Save Bar" />
+        <input
+          className="grey darken-1"
+          style={buttonStyleProfile}
+          type="submit"
+          value="Save Bar"
+        />
       </form>
     </div>
   );

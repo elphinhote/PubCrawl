@@ -41,27 +41,30 @@ const Profile = () => {
       <div className="container">
         <div className="row">
           <div className="col s6 m4 l4">
-            <div className="card">
+            <div className="card green lighten-5">
               <div className="card-content">
                 <div className="card-image">
-                  <img
-                    alt="placeholder"
-                    src="https://via.placeholder.com/150"
-                  />
+                  <img alt="placeholder" src="http://placekitten.com/150/150" />
                 </div>
                 <h3>{userData.user?.displayName}</h3>
               </div>
             </div>
           </div>
         </div>
-        <h4>Favorite Bars</h4>
-        <button className="btn modal-trigger">
-          <a style={buttonStyleProfile} href="/addnewbar">
-            New Bar
-          </a>
-        </button>
+        <div className="container grey-text text-darken-3">
+          <h4>Favorite Bars</h4>
+          <button className="btn modal-trigger grey darken-4">
+            <a
+              className="grey darken-4 grey-text text-lighten-2"
+              style={buttonStyleProfile}
+              href="/addnewbar"
+            >
+              New Bar
+            </a>
+          </button>
+        </div>
 
-        <ul className="list-group container">
+        <ul className="list-group ">
           {favArray.map((item, index) => (
             <CardProfile
               item={item}

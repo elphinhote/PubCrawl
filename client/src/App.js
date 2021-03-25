@@ -51,7 +51,7 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div className="App white">
       <ToastContainer />
       <Router>
         {!userData.user ? (

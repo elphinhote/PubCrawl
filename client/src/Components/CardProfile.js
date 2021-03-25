@@ -57,7 +57,7 @@ const CardProfile = ({ item, index, deleteFromFav }) => {
       <div className="row" id="barList">
         <div className="col s12 m6 l6">
           <div className="card grey lighten-5">
-            <div className="card-content grey-text">
+            <div className="card-content grey-text text-darken-1">
               <h5 className="#bar-name">{name}</h5>
               <ul>
                 <li className="#street-name">{street}</li>
@@ -79,13 +79,13 @@ const CardProfile = ({ item, index, deleteFromFav }) => {
               <button
                 style={buttonStyleProfile}
                 data-target={_id}
-                className="btn modal-trigger"
+                className="btn modal-trigger grey darken-4 grey-text text-lighten-2"
               >
                 Update
               </button>
               <button
                 style={buttonStyleProfile}
-                className="btn modal-trigger"
+                className="btn modal-trigger grey darken-4 grey-text text-lighten-2"
                 data-index={index}
                 onClick={deleteFromFav}
                 // className="btn-floating halfway waves-effect waves-light red"

@@ -67,8 +67,8 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <form className="container" onSubmit={submitLoginForm}>
+    <div className="white">
+      <form className="container white" onSubmit={submitLoginForm}>
         <label>Email</label>
         <input onChange={onChange} type="text" name="email" />
         <label>Password</label>

@@ -6,7 +6,7 @@ const PubCrawl = () => {
     <div>
       <div className="row container">
         <div className="col s12 m12 l12">
-          <div className="card-panel teal">
+          <div className="card-panel white">
             <SearchCrawl />
           </div>
         </div>
