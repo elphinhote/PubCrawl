@@ -3,21 +3,6 @@ import ReactMapGL, { Marker } from "react-map-gl";
 import axios from "axios";
 
 const Map = (props) => {
-  const [viewport, setViewport] = useState({
-    latitude: 37.7749,
-    longitude: -122.4194,
-    width: "50vw",
-    height: "50vh",
-    zoom: 10,
-  });
-
-  // useEffect(() => {
-  //   axios({
-  //     url: "/local_bars/coordinate",
-  //     method: "POST",
-  //     data: { idArray: props.searchId },
-  //   }).then((res) => console.log(res.data));
-  // }, [props.searchId]);
   const markers = useMemo(
     () =>
       props.coordinate.length === 0
@@ -28,11 +13,41 @@ const Map = (props) => {
               longitude={parseFloat(c.lng)}
               latitude={parseFloat(c.lat)}
             >
-              <div>{c.name}</div>
+              <div className="teal-text text-darken-1">{c.name}</div>
+              <button className="marker-btn">
+                <img src="/marker-stroked-15.svg" />
+              </button>
             </Marker>
           )),
     [props.coordinate]
   );
+
+  const [viewport, setViewport] = useState({
+    latitude: 37.7749,
+    longitude: -122.4194,
+    width: "70vw",
+    height: "50vh",
+    zoom: 10,
+  });
+
+  console.log(props.coordinate[0]);
+
+  // const coordinates = async () => {
+  //   let latCoord = localStorage.getItem("auth-token");
+  //   if (token === null) {
+  //     localStorage.setItem("auth-token", "");
+  //   } else {
+  //     try {
+  //       const userRes = await axios.get("/users", {
+  //         headers: { "x-auth-token": token },
+  //       });
+
+  //       setUserData({ token, user: userRes.data });
+  //     } catch (err) {
+  //       console.log("User must login");
+  //     }
+  //   }
+  // };
 
   return (
     <div>
