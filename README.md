@@ -1,5 +1,5 @@
 # PubSpace
-An app for setting up PubSpace
+An app designed to search your favorite pubs for PubCrawls
 
 
 
