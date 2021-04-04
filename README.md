@@ -1,5 +1,5 @@
-# PubCrawl
-An app for setting up Pub Crawl
+# PubSpace
+An app for setting up PubSpace
 
 
 
@@ -55,18 +55,18 @@ ISC
 
 
 ## Contributors
-Eva Wang
-Bonnie Lee
-Nick Martinez
-Alvaro Flores Suarez
-Alfredo Bracamontes-Ochoa
+* Eva Wang
+* Bonnie Lee
+* Nick Martinez
+* Alvaro Flores Suarez
+* Alfredo Bracamontes-Ochoa
 
 ## Questions
 Contact me:
 Email: [elphinhote@yahoo.com](elphinhote@yahoo.com)
 
-Github: https://github.com/elphinhote/workout-tracker
+Github: https://github.com/elphinhote/PubCrawl/
 
-Deployed App: https://mighty-fortress-74552.herokuapp.com/
+Deployed App:  https://pub-space.herokuapp.com/
 
 
